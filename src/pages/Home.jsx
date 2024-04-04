@@ -1,14 +1,16 @@
 import React, { useContext } from "react";
 import Nav from "../components/Nav";
 import { MyContext } from "../MyContext";
-
+import Typewriter from 'react-typewriter-effect';
 
 const Home = () => {
+  
   const {home} = useContext(MyContext);
   return (
     <div ref={home} className=" bg-gradient-to-r from-violet-500 to-fuchsia-500  h-[100vh] text-white  ">
       <Nav />
       <div className="h-[90vh] flex justify-center flex-col pl-6 lg:pl-20">
+   
         <h1 className="text-[40px] xl:text-9xl md:text-7xl ">
           Hello!
         </h1>
