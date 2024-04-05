@@ -30,7 +30,7 @@ const Nav2 = ({ setclick }) => {
       });
     }, []);
   return (
-    <nav className="bg-black opacity-95 h-full w-full absolute top-0 "  data-aos="zoom-in">
+    <nav className="bg-black opacity-95 h-full w-full absolute top-0 z-50"  data-aos="zoom-in">
       <div className="flex justify-end items-start h-24 p-5">
         <RiCloseLine
           size={50}
