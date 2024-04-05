@@ -60,14 +60,7 @@ const Nav2 = ({ setclick }) => {
         >
           Education
         </div>
-        <div
-          className="text-3xl cursor-pointer hover:text-4xl hover:transition-transform hover:text-gray-500"
-          onClick={() =>
-            education.current?.scrollIntoView({ behavior: "smooth" })
-          }
-        >
-          Resume
-        </div>
+       
         <div
           className="text-3xl cursor-pointer hover:text-4xl hover:transition-transform hover:text-gray-500"
           onClick={() =>
