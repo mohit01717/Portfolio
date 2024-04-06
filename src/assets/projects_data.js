@@ -40,7 +40,7 @@ export const projects_data  = [
         title: 'Flag',
         desc:"Indian flag I create using html,css",
         image:flag,
-        link:"https://github.com/mohit01717/Simon-Game"
+        link:"https://github.com/mohit01717/Indian-flag-css-"
     },
     {
         id:6,

@@ -10,7 +10,7 @@ import mohit from "../assets/mohit.png";
 import { MyContext } from "../MyContext";
 import Resume from "../components/Resume";
 import Aos from "aos";
-import 'aos/dist/aos.css';
+import "aos/dist/aos.css";
 import { useEffect } from "react";
 
 const About = () => {
@@ -18,9 +18,9 @@ const About = () => {
     Aos.init({
       // Global settings:
       disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
-      startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
-      initClassName: 'aos-init', // class applied after initialization
-      animatedClassName: 'aos-animate', // class applied on animation
+      startEvent: "DOMContentLoaded", // name of the event dispatched on the document, that AOS should initialize on
+      initClassName: "aos-init", // class applied after initialization
+      animatedClassName: "aos-animate", // class applied on animation
       useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
       disableMutationObserver: false, // disables automatic mutations' detections (advanced)
       debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
@@ -30,10 +30,10 @@ const About = () => {
       offset: 120, // offset (in px) from the original trigger point
       delay: 0, // values from 0 to 3000, with step 50ms
       duration: 400, // values from 0 to 3000, with step 50ms
-      easing: 'ease', // default easing for AOS animations
+      easing: "ease", // default easing for AOS animations
       once: false, // whether animation should happen only once - while scrolling down
       mirror: false, // whether elements should animate out while scrolling past them
-      anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+      anchorPlacement: "top-bottom", // defines which position of the element regarding to window should trigger the animation
     });
   }, []);
   const { about } = useContext(MyContext);
@@ -44,7 +44,6 @@ const About = () => {
     cofee: false,
   });
   const [open, setopen] = useState(false);
-
 
   return (
     <section ref={about} className=" bg-black text-white relative" id="about">
@@ -69,11 +68,7 @@ const About = () => {
           </div>
         </div>
         {open && <Resume setopen={setopen} />}
-        <div
-          className="flex flex-col gap-4" data-aos="fade-left"
-       
-          
-        >
+        <div className="flex flex-col gap-4" data-aos="fade-left">
           <h1 className="xl:text-6xl text-4xl uppercase">About Me</h1>
           <p className=" xl:w-[400px] w-full  text-[16px] xl:text-xl">
             Hello! I’m Mohit Gagneja. Experienced with all stages of the
@@ -113,51 +108,51 @@ const About = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col justify-center items-center gap-5 pb-10 h-[40vh]">
-        <h1 className="text-2xl xl:text-4xl uppercase self-start px-10 xl:px-20 " data-aos="fade-bottom" >
-          My Interests
-        </h1>
-        <div className="flex gap-20 justify-center  flex-wrap">
+      <h1 className="text-2xl xl:text-4xl uppercase self-start px-10 xl:px-20 ">
+        My Interests
+      </h1>
+      <div className="flex flex justify-center items-center gap-10 p-10 h-[30vh] flex-wrap">
+      
+      
+        <div className="flex flex-col gap-20 justify-center  items-center  gap-4">
           <div
-            className=" flex flex-col items-center gap-4 "
+            className=" h-16 w-16 bg-slate-500 rounded-full flex justify-center items-center cursor-pointer hover:bg-green-500 "
             onMouseEnter={() => setclick({ ...click, drawing: true })}
             onMouseLeave={() => setclick({ ...click, drawing: false })}
           >
-            <div className=" h-16 w-16 bg-slate-500 rounded-full flex justify-center items-center cursor-pointer hover:bg-green-500 ">
-              <RiPencilFill />
-            </div>
-            {click.drawing ? <h1>Drawing</h1> : null}
+            <RiPencilFill />
           </div>
+          {click.drawing ? <h1 data-aos="zoom-in">Drawing</h1> : null}
+        </div>
+        <div className=" flex flex-col items-center  gap-4">
           <div
-            className=" flex flex-col items-center  gap-4"
+            className=" h-16 w-16 bg-slate-500 rounded-full flex justify-center items-center cursor-pointer hover:bg-green-500"
             onMouseEnter={() => setclick({ ...click, traveling: true })}
             onMouseLeave={() => setclick({ ...click, traveling: false })}
           >
-            <div className=" h-16 w-16 bg-slate-500 rounded-full flex justify-center items-center cursor-pointer hover:bg-green-500">
-              <RiFlightTakeoffLine />
-            </div>
-            {click.traveling ? <h1>Travelling</h1> : null}
+            <RiFlightTakeoffLine />
           </div>
+          {click.traveling ? <h1 data-aos="zoom-in">Travelling</h1> : null}
+        </div>
+        <div className=" flex flex-col items-center  gap-4">
           <div
-            className=" flex flex-col items-center  gap-4"
+            className=" h-16 w-16 bg-slate-500 rounded-full flex justify-center items-center cursor-pointer hover:bg-green-500"
             onMouseEnter={() => setclick({ ...click, music: true })}
             onMouseLeave={() => setclick({ ...click, music: false })}
           >
-            <div className=" h-16 w-16 bg-slate-500 rounded-full flex justify-center items-center cursor-pointer hover:bg-green-500">
-              <RiMusic2Fill />
-            </div>
-            {click.music ? <h1>Music</h1> : null}
+            <RiMusic2Fill />
           </div>
+          {click.music ? <h1 data-aos="zoom-in">Music</h1> : null}
+        </div>
+        <div className=" flex flex-col items-center  gap-4">
           <div
-            className=" flex flex-col items-center  gap-4"
+            className=" h-16 w-16 bg-slate-500 rounded-full flex justify-center items-center cursor-pointer hover:bg-green-500"
             onMouseEnter={() => setclick({ ...click, cofee: true })}
             onMouseLeave={() => setclick({ ...click, cofee: false })}
           >
-            <div className=" h-16 w-16 bg-slate-500 rounded-full flex justify-center items-center cursor-pointer hover:bg-green-500">
-              <RiCupFill />
-            </div>
-            {click.cofee ? <h1>Coffee</h1> : null}
+            <RiCupFill />
           </div>
+          {click.cofee ? <h1 data-aos="zoom-in">Coffee</h1> : null}
         </div>
       </div>
     </section>
