@@ -111,7 +111,7 @@ const About = () => {
       <h1 className="text-2xl xl:text-4xl uppercase self-start px-10 xl:px-20 ">
         My Interests
       </h1>
-      <div className="flex flex justify-center items-center gap-10 p-10 h-[30vh] flex-wrap">
+      <div className="flex flex justify-center items-center gap-10 p-10 h-[50vh] flex-wrap">
       
       
         <div className="flex flex-col gap-20 justify-center  items-center  gap-4">
